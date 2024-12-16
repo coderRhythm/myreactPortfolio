@@ -1,0 +1,67 @@
+.contact-form-container {
+    background-color: #121212; /* Darker background for better contrast */
+    color: #f0f0f0; /* Light text color for contrast */
+    padding: 3rem;
+    border-radius: 16px;
+    margin: 50px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Slight shadow for depth */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text for headings */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff; /* White text for labels */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333333; /* Dark border for inputs */
+    background-color: #333333; /* Dark background for inputs */
+    color: #f0f0f0; /* Light text color inside inputs */
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    /* width: 100%; */
+    padding: 12px;
+    background-color: #007BFF;
+    color: #f0f0f0; /* Light text for the button */
+    font-size: 16px;
+    border: 1px solid #444444; /* Dark border */
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    /* -webkit-text-size-adjust: ; */
+    
+    background-color: #1060ff; /* Slightly lighter gray on hover */
+  }
+  
+  .error {
+    color: #ff4d4d; /* Bright red color for error messages */
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
