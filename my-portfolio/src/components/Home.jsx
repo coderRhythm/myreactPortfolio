@@ -7,6 +7,17 @@ const Home = () => {
     <div>
       <div className="home">
         <div className="home-container">
+          
+          {/* Right Section */}
+          <div className="right-container">
+            <figure>
+              <img src={profileImage} alt="Profile" className="profile-image" />
+              <figcaption>
+                <h2 className="profile-name">Rhythm Sethiya</h2>
+                <p className="profile-tagline">Future Software Engineer</p>
+              </figcaption>
+            </figure>
+          </div>
           <div className="left-container">
             <h1 className="greeting">Namaste and Jai Jinendra,</h1>
             <h1>Hello, I'm</h1>
@@ -18,16 +29,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Right Section */}
-          <div className="right-container">
-            <figure>
-              <img src={profileImage} alt="Profile" className="profile-image" />
-              <figcaption>
-                <h2 className="profile-name">Rhythm Sethiya</h2>
-                <p className="profile-tagline">Future Software Engineer</p>
-              </figcaption>
-            </figure>
-          </div>
         </div>
       </div>
 
