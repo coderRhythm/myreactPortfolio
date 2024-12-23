@@ -98,12 +98,10 @@ figure {
   margin: 0;
 }
 
-/* Portfolio Section */
 .portfolio-section {
-  /* margin-top: 5rem;  */
   margin: 0px auto;
   max-width: 1300px;
-  background-color: #1b1b1b; /* Slightly lighter background to differentiate */
+  background-color: #1b1b1b; 
   padding: 4rem;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow to stand out */

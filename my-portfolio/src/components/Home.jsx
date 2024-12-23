@@ -1,15 +1,45 @@
-import React from 'react';
-import './home.css';
-import profileImage from '../assets/profile_image.png';
+import React from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
+import "./home.css";
+import profileImage from "../assets/profile_image.png";
 
 const Home = () => {
+  // Framer Motion animation variants for advanced effects
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 }, // Initial state
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.3, // Delay for child animations
+        staggerChildren: 0.2, // Time between animations of child elements
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50, scale: 0.9 }, // Slide-in from the left
+    visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8 } },
+  };
+
+  const rightItemVariants = {
+    hidden: { opacity: 0, x: 50, scale: 0.9 }, // Slide-in from the right
+    visible: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.8 } },
+  };
+
   return (
     <div>
       <div className="home">
-        <div className="home-container">
-          
+        <motion.div
+          className="home-container"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Right Section */}
-          <div className="right-container">
+          <motion.div className="right-container" variants={rightItemVariants}>
             <figure>
               <img src={profileImage} alt="Profile" className="profile-image" />
               <figcaption>
@@ -17,8 +47,10 @@ const Home = () => {
                 <p className="profile-tagline">Future Software Engineer</p>
               </figcaption>
             </figure>
-          </div>
-          <div className="left-container">
+          </motion.div>
+
+          {/* Left Section */}
+          <motion.div className="left-container" variants={itemVariants}>
             <h1 className="greeting">Namaste and Jai Jinendra,</h1>
             <h1>Hello, I'm</h1>
             <div className="name-highlight">Rhythm Sethiya</div>
@@ -27,27 +59,31 @@ const Home = () => {
               focused on delivering <strong>innovative software solutions</strong>. I blend creativity with technology
               to craft impactful digital experiences.
             </p>
-          </div>
-
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Portfolio Section */}
-      <div className="portfolio-section">
+      <motion.div
+        className="portfolio-section"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="portfolio-container">
-          <h3>Welcome to My Portfolio</h3>
-          <p>
+          <motion.h3 variants={itemVariants}>Welcome to My Portfolio</motion.h3>
+          <motion.p variants={itemVariants}>
             I’m a <strong>developer</strong> skilled in <strong>web technologies</strong> and <strong>computer science</strong>.
-          </p>
-          <p>
+          </motion.p>
+          <motion.p variants={itemVariants}>
             Explore my projects and journey in tech—whether it’s building websites, optimizing code, or tackling challenges,
             I’m always eager to grow.
-          </p>
-          <p className="cta-text">
+          </motion.p>
+          <motion.p className="cta-text" variants={itemVariants}>
             Let’s connect and create extraordinary solutions together!
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

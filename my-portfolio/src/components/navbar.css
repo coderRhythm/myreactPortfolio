@@ -27,6 +27,7 @@
   .Link {
     text-decoration: none;
     font-size: 25px;
+    cursor: pointer;
     color: white;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
@@ -69,67 +70,68 @@
   }
   
  /* Responsive Styles */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .nav-inner-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        gap: 15px;
-        height: 100vh; /* Full screen height */
-        width: 100%; /* Full screen width */
-        background-color: black;
-        padding-top: 100px; /* Adjust padding */
-        z-index: 1000; /* Ensure it stays above other elements */
-        transition: all 0.7s ease-in-out; /* Smooth slide-in animation */
-        transform: translateX(-100%); /* Hide off-screen by default */
-        overflow-y: auto; /* Enable vertical scrolling */
-    }
-    
-    .nav-inner-container .Link {
-        color: white;
-        padding-left: 40px;
-        margin-top: 20px; /* Adjust margin to better space out the links */
-        width: 300px;
-        font-size: 40px;
-    }
+  .nav-inner-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      gap: 15px;
+      height: 100vh; /* Full screen height */
+      width: 100%; /* Full screen width */
+      background-color: black;
+      padding-top: 100px; /* Adjust padding */
+      z-index: 1000; /* Ensure it stays above other elements */
+      transform: translateX(-100%); /* Hide off-screen by default */
+      overflow-y: auto; /* Enable vertical scrolling */
+      transition: transform 0.5s ease-in-out; /* Smooth left-to-right animation */
+  }
 
-    .nav-inner-container .Link:hover {
-        font-size: 40px;
-        background-color: transparent; /* Remove background color on hover */
-    }
-    
-    .nav-inner-container.show-menu {
-        display: flex;
-        transform: translateX(0); /* Slide-in when active */
-    }
-    
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 100px;
-        left: 30px; /* Adjust the position as needed */
-        z-index: 1010;
-        cursor: pointer;
-    }
+  .nav-inner-container.show-menu {
+      display: flex;
+      transform: translateX(0); /* Slide in from the left */
+  }
 
-    .hamburger:hover{
-        font-size: 20px;
-    }
+  .nav-inner-container .Link {
+      color: white;
+      padding-left: 40px;
+      margin-top: 20px; /* Adjust margin to better space out the links */
+      width: 300px;
+      font-size: 40px;
+  }
 
-    .close-icon {
-        position: fixed;
-        top: 70px;
-        right: 100px;
-        font-size: 70px;
-        font-weight: bolder;
-    }
-    
-    a{
+  .nav-inner-container .Link:hover {
+      font-size: 40px;
+      background-color: transparent; /* Remove background color on hover */
+  }
+
+  .hamburger {
+      display: block;
+      position: absolute;
+      top: 100px;
+      left: 30px; /* Adjust the position as needed */
+      z-index: 1010;
+      cursor: pointer;
+  }
+
+  .hamburger:hover {
+      font-size: 20px;
+  }
+
+  .close-icon {
+      position: fixed;
+      top: 70px;
+      right: 100px;
+      font-size: 70px;
+      font-weight: bolder;
+  }
+
+  a {
       width: 100px;
-    }
-    
+  }
 }
+
 
   
