@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div class = "BigHome">
       <div className="home">
         <motion.div
           className="home-container"

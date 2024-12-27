@@ -1,144 +1,104 @@
 .project-container {
-  /* background-color: #121212; Subtle dark theme for a modern look */
-  color: #f0f0f0;
-  padding: 3rem;
-  border-radius: 16px;
+  padding: 20px;
   max-width: 1200px;
-  height: 700px;
-  margin: 50px auto;
-  font-family: 'Arial', sans-serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 
-h2 {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 20px;
+.project-container h2 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fefefe;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
-  
-  background-color: #19191b;
-  /* text-align: center; */
-  /* padding-left: 300px; */
-  /* padding-top: 50px; */
-  margin: 0  auto;
-  margin-left: 200px;
-  height: 400px;
-  max-width:800px;
-
-  /* max-width: 1000px; */
-  /* padding-top: 7.5%;
-padding-left: 14.5%; */
-padding: 20px;
-  /* margin: 0 px; Padding for the slider items */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  background: #1f1f1f;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Add spacing between the project button and slider content */
+.project-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.project-location,
+.project-duration {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.project-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.project-details li {
+  margin-bottom: 5px;
+  color: white;
+}
+
 .project-button {
-  margin-top: 15px; /* Adds space between button and other content */
-  background-color: #4f9eff;
-  color: #fff;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 10px 15px;
+  background: #4f9eff;
+  color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s;
 }
 
 .project-button:hover {
-  background-color: #3788d8;
-  transform: scale(1.05);
+  background: #007acc;
 }
 
-/* Add space between buttons and slider */
-.slick-slider {
-  /* margin: 30px auto; Adds spacing around the slider */
-  padding-bottom: 20px; /* Prevents overlapping with navigation dots */
-}
-
-.slick-dots li button:before {
-  color: #f0f0f0; /* Light color for dots */
-  font-size: 12px;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #4f9eff; /* Highlight active dot */
-}
-
-.slick-arrow {
-  background-color: #4f9eff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transition: background-color 0.3s;
-}
-
-.slick-arrow:hover {
-  background-color: #3788d8;
-}
-
-/* Add spacing around the navigation arrows to avoid overlapping */
-.slick-prev,
-.slick-next {
-  z-index: 2;
-  margin-top: -20px; /* Centers arrows vertically */
-}
-
-@media screen and (max-width: 768px) {
-  .project-card {
-    margin: 10px;
-    margin: auto 0px;
-    max-width: auto;
-    margin-top: 14.5%;
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  .project-button {
-    width: 100%; /* Makes button full-width for smaller screens */
-    margin-top: 20px; /* Adds spacing for mobile layout */
-  }
-
-  .slick-slider {
-    padding-bottom: 40px; /* Extra padding for dots and mobile space */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media screen and (max-width: 468px) {
-  .project-card {
-    margin: 10px;
-    max-width: 400px;
-    /* margin: auto 0px; */
-    /* margin-top: 14.5%; */
-    font-size: 14px;
-  }
+/* Show More Button */
+.show-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: #4f9eff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-  h2 {
-    font-size: 14px;
-  }
-
-  .project-button {
-    width: 100%; 
-    margin-top: 20px; /* Adds spacing for mobile layout */
-  }
-
-  .slick-slider {
-    padding-bottom: 40px; /* Extra padding for dots and mobile space */
-  }
+.show-more-button:hover {
+  background: #007acc;
 }

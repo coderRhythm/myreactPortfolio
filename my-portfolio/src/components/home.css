@@ -1,5 +1,9 @@
 /* General Layout */
+.BigHome{
+  margin-top: 100px;
+}
 .home {
+  
   background-color: #121212; 
   color: #f0f0f0; 
   padding: 4rem;
