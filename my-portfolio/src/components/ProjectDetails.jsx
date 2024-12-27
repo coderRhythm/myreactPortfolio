@@ -18,7 +18,7 @@ const ProjectDetails = () => {
       tech: "Python, OpenCV, TensorFlow",
       details: "This project involved preprocessing images, including noise removal and grayscale conversion.",
       image: imageProcessing,
-      github: "https://github.com/coderRhythm/image-processing"
+      github: "https://github.com/coderRhythm/imageProcessing"
     },
     "ocr-text-extraction": {
       title: "Image OCR Text Extraction",
@@ -28,7 +28,7 @@ const ProjectDetails = () => {
       tech: "Python, Tesseract, OpenCV",
       details: "We used Tesseract OCR to extract text from scanned documents and images.",
       image: ocrExtraction,
-      github: "https://github.com/coderRhythm/ocr-text-extraction"
+      github: "https://github.com/coderRhythm/Text_extraction_project"
     },
     "cardiovascular-risk-assessor": {
       title: "Cardiovascular Risk Assessor",
@@ -38,7 +38,7 @@ const ProjectDetails = () => {
       tech: "Python, scikit-learn, Pandas, Seaborn, Ensemble Learning",
       details: "This project uses supervised learning techniques to assess cardiovascular risk based on user input data.",
       image: cardiovascularRiskAssessor,
-      github: "https://github.com/coderRhythm/cardiovascular-risk-assessor"
+      github: "https://github.com/coderRhythm/Cardiovascular_system"
     },
     "college-event-management-system": {
       title: "College Event Management System",
@@ -48,7 +48,7 @@ const ProjectDetails = () => {
       tech: "JavaScript, Node.js, Express.js, HTML, CSS, MySQL",
       details: "The system allows event organizers to create events and students to register, with a database backend.",
       image: collegeEventManagement,
-      github: "https://github.com/coderRhythm/college-event-management-system"
+      github: "https://github.com/coderRhythm/college_event"
     }
   };
 
