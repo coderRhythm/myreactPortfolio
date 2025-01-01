@@ -4,7 +4,6 @@ import { FaPython, FaJs, FaDatabase, FaReact, FaChartBar, FaCamera, FaCheckCircl
 import { SiOpencv, SiTensorflow, SiPytorch } from 'react-icons/si';  
 
 const About = () => {
-  // State to manage the modal visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // State to store the modal content
